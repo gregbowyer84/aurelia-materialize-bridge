@@ -61,6 +61,9 @@ export class MdSelect {
 		}
 	}
 
+	@au.bindable({ defaultBindingMode: au.bindingMode.oneTime })
+	container: Element | string;
+
 	@au.ato.bindable.booleanMd
 	showErrortext: boolean = true;
 
@@ -131,7 +134,15 @@ export class MdSelect {
 				this.instance.destroy();
 			}
 		}
-		this.instance = new M.FormSelect(this.element, {});
+
+		var _container: Element = null;
+
+		if (typeof this.container == "string") {
+			var found = $(this.container);
+			_container = found.length > 0 ? found[0] : null;
+		}
+
+		this.instance = new M.FormSelect(this.element, { dropdownOptions: { container: _container } });
 		if (isValid) {
 			this.instance.input.classList.add("valid");
 		}
