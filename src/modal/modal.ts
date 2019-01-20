@@ -63,6 +63,7 @@ export class MdModal {
 		au.cleanOptions(options);
 		this.attributeManager.addClasses("modal");
 		this.instance = new M.Modal(this.element, options);
+		this.fixedFooterChanged();
 	}
 
 	detached() {
