@@ -16,6 +16,7 @@ export declare class MdSelect {
     enableOptionObserver: boolean;
     label: string;
     labelChanged(): void;
+    container: Element | string;
     showErrortext: boolean;
     inputField: HTMLDivElement;
     optionsMutationObserver: any;

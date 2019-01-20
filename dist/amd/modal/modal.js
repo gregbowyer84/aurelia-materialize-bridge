@@ -31,6 +31,7 @@ define(["require", "exports", "tslib", "../aurelia"], function (require, exports
             au.cleanOptions(options);
             this.attributeManager.addClasses("modal");
             this.instance = new M.Modal(this.element, options);
+            this.fixedFooterChanged();
         };
         MdModal.prototype.detached = function () {
             this.instance.destroy();

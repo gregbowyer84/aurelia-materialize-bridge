@@ -164,7 +164,12 @@ var MdSelect = /** @class */ (function () {
                 this.instance.destroy();
             }
         }
-        this.instance = new M.FormSelect(this.element, {});
+        var _container = null;
+        if (typeof this.container == "string") {
+            var found = $(this.container);
+            _container = found.length > 0 ? found[0] : null;
+        }
+        this.instance = new M.FormSelect(this.element, { dropdownOptions: { container: _container } });
         if (isValid) {
             this.instance.input.classList.add("valid");
         }
@@ -232,6 +237,10 @@ var MdSelect = /** @class */ (function () {
         au.ato.bindable.stringMd,
         tslib_1.__metadata("design:type", String)
     ], MdSelect.prototype, "label", void 0);
+    tslib_1.__decorate([
+        au.bindable({ defaultBindingMode: au.bindingMode.oneTime }),
+        tslib_1.__metadata("design:type", Object)
+    ], MdSelect.prototype, "container", void 0);
     tslib_1.__decorate([
         au.ato.bindable.booleanMd,
         tslib_1.__metadata("design:type", Boolean)
