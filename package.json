@@ -1,6 +1,6 @@
 {
 	"name": "aurelia-materialize-bridge",
-	"version": "1.2.5",
+	"version": "1.2.10",
 	"registry": "github",
 	"description": "Aurelia interface to http://materializecss.com/",
 	"keywords": [
@@ -29,7 +29,7 @@
 		"postbuild:amd": "copyfiles --up 1 src/**/*.html src/**/*.css src/**/*.map dist/amd",
 		"build:commonjs": "tsc --outDir dist/commonjs --module commonjs",
 		"postbuild:commonjs": "copyfiles --up 1 src/**/*.html src/**/*.css src/**/*.map dist/commonjs",
-		"build:es2015": "tsc --outDir dist/es2015 --module es2015",
+		"build:es2015": "tsc --outDir dist/es2015 --module es2015 --target es6",
 		"postbuild:es2015": "copyfiles --up 1 src/**/*.html src/**/*.css src/**/*.map dist/es2015",
 		"build:native-modules": "tsc --outDir dist/native-modules --module es2015",
 		"postbuild:native-modules": "copyfiles --up 1 src/**/*.html src/**/*.css src/**/*.map dist/native-modules",
@@ -42,7 +42,7 @@
 		"release": "standard-version",
 		"sass:copy": "rimraf sass-copy && copyfiles --up 3 \"node_modules/materialize-css/sass/**/*.scss\" sass-copy",
 		"sass:replace-sass": "ts-node ./replace-sass.ts",
-		"sass:build": "ls sass-copy && sass sass-copy/materialize.scss sass-copy/materialize.css --no-source-map --style=compressed",
+		"sass:build": "sass sass-copy/materialize.scss sass-copy/materialize.css --no-source-map --style=compressed",
 		"sass:replace-css": "ts-node ./replace-css.ts",
 		"build-md-colors": "npm run sass:copy && npm run sass:replace-sass && npm run sass:build && npm run sass:replace-css"
 	},

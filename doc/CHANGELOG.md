@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.10"></a>
+## [1.2.10](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/compare/v1.2.9...v1.2.10) (2019-04-09)
+
+
+### Bug Fixes
+
+* **select:** restore validation status on the wrapper ([b7bb532](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/commit/b7bb532))
+
+
+
+<a name="1.2.9"></a>
+## [1.2.9](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/compare/v1.2.8...v1.2.9) (2019-03-18)
+
+
+### Bug Fixes
+
+* **package.json:** build es2015 dist for es6 ([095d932](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/commit/095d932))
+
+
+
+<a name="1.2.8"></a>
+## [1.2.8](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/compare/v1.2.7...v1.2.8) (2019-03-03)
+
+
+### Bug Fixes
+
+* **timepicker:** add missing events ([03b9d9e](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/commit/03b9d9e))
+
+
+
+<a name="1.2.7"></a>
+## [1.2.7](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/compare/v1.2.6...v1.2.7) (2019-03-03)
+
+
+### Bug Fixes
+
+* **config-builder:** make lint happy ([43dd34b](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/commit/43dd34b))
+* **timepicker:** use correct control id ([ab46c67](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/commit/ab46c67))
+
+
+
+<a name="1.2.6"></a>
+## [1.2.6](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/compare/v1.2.5...v1.2.6) (2019-02-11)
+
+
+### Bug Fixes
+
+* **lookup:** check for a null input reference ([8e1c9e6](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/commit/8e1c9e6))
+
+
+
 <a name="1.2.5"></a>
 ## [1.2.5](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge/compare/v1.2.4...v1.2.5) (2019-01-10)
 

@@ -5,7 +5,7 @@ var MdTimePicker = /** @class */ (function () {
         var _this = this;
         this.element = element;
         this.taskQueue = taskQueue;
-        this.controlId = "md-datepicker-" + MdTimePicker_1.id++;
+        this.controlId = "md-timepicker-" + MdTimePicker_1.id++;
         this.label = "";
         this.placeholder = "";
         this.showErrortext = true;
@@ -70,6 +70,7 @@ var MdTimePicker = /** @class */ (function () {
         }
     };
     MdTimePicker.prototype.attached = function () {
+        var _this = this;
         if (this.placeholder) {
             this.input.setAttribute("placeholder", this.placeholder);
         }
@@ -82,7 +83,12 @@ var MdTimePicker = /** @class */ (function () {
             i18n: this.i18n,
             autoClose: this.autoClose,
             twelveHour: this.twelveHour,
-            vibrate: this.vibrate
+            vibrate: this.vibrate,
+            onSelect: function (hour, minute) { return au.fireMaterializeEvent(_this.element, "select", { hour: hour, minute: minute }); },
+            onOpenStart: function () { return au.fireMaterializeEvent(_this.element, "open"); },
+            onOpenEnd: function () { return au.fireMaterializeEvent(_this.element, "close"); },
+            onCloseStart: function () { return au.fireMaterializeEvent(_this.element, "open"); },
+            onCloseEnd: function () { return au.fireMaterializeEvent(_this.element, "close"); }
         };
         au.cleanOptions(options);
         this.instance = new M.Timepicker(this.input, options);
