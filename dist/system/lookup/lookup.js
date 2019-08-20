@@ -83,7 +83,6 @@ System.register(["tslib", "../aurelia", "./lookup-state", "../common/discardable
                                         this.suppressFilterChanged = false;
                                         return [2 /*return*/];
                                     }
-                                    this.setValue(undefined);
                                     discardable_promise_1.discard(this.searchPromise);
                                     this.options = [MdLookup_1.searching];
                                     _b.label = 1;

@@ -39,7 +39,6 @@ export class MdLookup {
 			this.suppressFilterChanged = false;
 			return;
 		}
-		this.setValue(undefined);
 		discard(this.searchPromise);
 		this.options = [MdLookup.searching];
 		try {

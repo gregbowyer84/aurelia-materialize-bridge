@@ -40,7 +40,6 @@ let MdLookup = MdLookup_1 = class MdLookup {
                 this.suppressFilterChanged = false;
                 return;
             }
-            this.setValue(undefined);
             discard(this.searchPromise);
             this.options = [MdLookup_1.searching];
             try {

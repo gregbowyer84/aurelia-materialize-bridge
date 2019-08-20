@@ -10,3 +10,4 @@ sample/dist
 sass-copy
 
 /copyfiles.cmd
+/.vs
